@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]--><!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]--><!--[if !IE]><!--><html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verify Card/Certificate | TUV</title>
+    <meta name="csrf-token" content="GM7UcbcIEDj069moB6uF1f2lrySOY2WX05IGzJbs">
+    
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="https://operations.tuvatsa.com/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA App">
+    <link rel="apple-touch-icon" href="favicons/icons-icon-152x152.png">
+    <meta name="msapplication-TileImage" content="https://operations.tuvatsa.com/images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/css-select2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/css-select2-bootstrap4.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/css-custom.css">
+	<link href="css/css-login-4.min.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome JS -->
+    <script defer src="js/js-solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="js/js-fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="js/7.2.0-sweetalert2.all.min.js"></script>
+    <!-- END THEME LAYOUT STYLES -->
+
+    <!-- Radio buttons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css%0A">
+
+    <style type="text/css">
+        .swal2-cancel{
+            background: goldenrod !important;
+        }
+        .swal2-confirm{
+            background: orangered !important;
+        }
+        .swal2-warning{
+            /*display: block !important;*/
+            background: red !important;
+            color: white !important;
+            border: 1px solid white !important;
+        }
+        .modal-header{
+            background-color: #111719;
+            color: white;
+        }
+        .modal-header > .close{
+           background: black !important;
+           color: white !important;
+        }
+        .modal-footer{
+            background-color: #111719;
+        }
+    </style>
+        <link rel="shortcut icon" href="favicons/favicon.ico">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+<nav id="sidebar">
+    <div class="sidebar-header">
+        
+        
+        <img width="52" src="images/img-TUV.jpg" alt="">
+    </div>
+    <ul class="list-unstyled components">
+        <li class="d-none d-md-block"><span title="Main Navigation">Main Navigation</span></li>
+        <li class="">
+            <a href="dashboard.html" title="Dashboard">
+                <i class="fas fa-rocket"></i> 
+                <span class="d-none d-md-inline-block">Dashboard</span>
+            </a>
+        </li>
+                        				                
+                
+                
+    </ul>
+</nav>
+        <!-- Page Content  -->
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+
+        <div class="collapse navbar-collapse top_menu" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                                                <li class="dropdown dropdown-user">
+                    <a href="logout.html" class="text-light" title="Logout"><i class="fas fa-power-off fa-lg"></i></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style type="text/css">
+    .label-success{
+        background-color: lightgreen !important;
+        color: black !important;
+    }
+    .label-default{
+        background-color: #cec9c9 !important;
+        color: black !important;
+    }
+</style>                        
+            <div class="loading">
+  <div class="loader"></div>
+</div>
+    <!-- breadcrumb -->
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Verify Card/Certificate</h4>
+        </div>
+    </div>
+
+    <div class="verify_your_card">
+      <h1 class="valid" style="text-align: center; font-size: 30px; margin-top: 20px; background-color: #dff0d8; padding: 10px; display: none;max-width: 320px; margin: 15px auto;">Verified</h1>
+      <h1 class="invalid" style="text-align: center; font-size: 30px; margin-top: 20px; background-color: #F2DEDD; padding: 10px; display: none;max-width: 320px; margin: 15px auto;">Invalid</h1>
+      <h1 class="error" style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff; background-color: #dc3545; display: none; padding: 10px; font-size: 20px;"></h1>
+    </div>
+
+  <div class="verify_card_container">
+      <div style="height: 10vh; padding: 2px; padding-bottom: 0;">
+			<div style="float: left; width: 75%;">
+				<img src="images/img-tuv_text_left.png" class="text_left" style="margin-top:20px;">
+			</div>
+			<div style="float: left; width: 25%;">
+				<img src="images/img-logo_right.png" class="logo_right">
+			</div>
+		</div>
+    <div class="defect_report_container">
+    </div>
+  </div>
+
+    
+    <style>
+    @media  screen and (min-width: 750px) {
+        img.logo_right{
+          width: 34%;
+        }
+        img.text_left{
+          width: 34%;
+        }
+        .watermark{
+          margin-top: 7%;
+        }
+        /* hide it elsewhere */
+    }
+    @media  screen and (max-width: 750px) {
+        img.logo_right{
+            width: 100%;
+        }
+        img.text_left{
+          width: 90%;
+        }
+        .watermark{
+          margin-top: 70%;
+        }
+        /* hide it elsewhere */
+    }
+    .verify_card_container{
+      background-color: #fff;
+    }
+    #canvas {
+      width: 230px;
+      height: 300px;
+      border-radius: 4px;
+    }
+    .loading{
+      position: absolute;
+      top: 41px;
+      left: 250px;
+      bottom: 0;
+      right: 0;
+      background-color: #ddd;
+      z-index: 999;
+      text-align: center;
+      opacity: .5;
+      display: none;
+    }
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid blue;
+      border-right: 8px solid green;
+      border-bottom: 8px solid red;
+      width: 50px;
+      height: 50px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      margin: 0 auto;
+      margin-top: 170px;
+    }
+
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes  spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+        </div>
+    </div>
+    <div class="page-footer">
+    <div class="page-footer-inner">2023 @ TUV</div>
+</div>
+    <script src="js/jquery-1.12.4.js"></script>
+<script src="js/1.12.1-jquery-ui.js"></script>
+<script src="js/umd-popper.min.js"></script>
+<script src="js/js-bootstrap.min.js"></script>
+<script src="js/js-select2.min.js"></script>
+<script src="js/standard-ckeditor.js"></script>
+<script src="js/5-tinymce.min.js"></script>
+<script src="js/5.4.0-dropzone.js"></script>
+
+<script type="text/javascript" src="js/js-jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/js-dataTables.bootstrap4.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // setInterval(function(){
+        //     var card_id = $('.sender_report_no').val();
+        //     console.log(card_id);
+        // }, 3000);
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+        $('#request_area').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#customer').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#service, #location, #request_type, #ndt_inspector_name, #ndt_inspector_level, #ndt_approved_by, #ndt_approved_by_level').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#ref_no').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+		$('#job_number_card').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#company_name_image').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#job_number_search').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            width: 'resolve'
+        });
+        $('#user_role').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#region').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#user_status').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            allowClear: true,
+            width: 'resolve'
+        });
+        $('#access_modules, #search_customer').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            multi_select: true,
+            searchInputPlaceholder: ''
+        });
+        $('#card_type, #job_number').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            multi_select: true,
+            searchInputPlaceholder: ''
+        });
+        $('#search_status').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            multi_select: true,
+            searchInputPlaceholder: ''
+        });
+        $('#branch_office, #client_name, #lifting_inspectors, #inspector_id, #company_id, #location, #inspector_status').select2({
+            theme: 'bootstrap4',
+            placeholder: "",
+            searchInputPlaceholder: ''
+        });
+        $('#date').datepicker();
+        $('#issue_date').datepicker();
+        $('#expiry_date').datepicker();
+        $('#search_issue_date').datepicker();
+        $('input[name="valid_untill"], input[name="date"],input[name="inspection_date"], input[name="r_inspection_date"], input[name="r_certifi_issue_date"], #from_date, #to_date, #report_date').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+        });
+        $('#from_date, #to_date, #operation_date').datepicker({
+            format: 'dd-mm-yyyy'
+        });
+
+    });
+    
+    $(document).on('mousemove', '.js_notif_new', function(e){
+      var notif_id = $(this).data('notif_id');
+      $(this).find('.label-icon').removeClass('label-warning');
+      // $(this).find('.label-icon').addClass('label-success');
+      $(this).find('.label-icon').addClass('label-default');
+      $(this).removeClass('js_notif_new');
+      var count = parseInt($('.badge-default').text());
+      count_new = (count-1 <= 0) ? 'no' : count-1;
+      count = (count-1 < 0) ? 0 : count-1;
+      $('.badge-default').text(count);
+      $('.js_count').text(count_new+' new');
+      // $.ajax({
+      //     url: "https://operations.tuvatsa.com/change-status-notif",
+      //     data: {'notif_id':notif_id},
+      //     headers: {
+      //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      //     },
+      //     type: 'POST'
+      // });
+    });
+
+    //validate customer when added from popup
+    function validateCustomer(){
+        var name = $('#addCustomerModel #name').val();
+        var email = $('#addCustomerModel #email').val();
+        var address = $('#addCustomerModel #address').val();
+        var phone = $('#addCustomerModel #phone_no').val();
+        var city = $('#addCustomerModel #city').val();
+        var customer_code = $('#addCustomerModel #customer_code').val();
+        var returnVal = false;
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            type:'POST',
+            url:'https://operations.tuvatsa.com/verify_customer',
+            data:{name: name, email: email, address: address, phone:phone, city:city, customer_code:customer_code},
+            success:function(data){
+                if($.isEmptyObject(data.error)){
+                    $(".print-error-msg-customer").css('display','none');
+                    $('.create_customer .page_cntnt_title').after('<div class="alert alert-success" role="alert">New customer is created successfully!')
+                    $('select[name="customer"]').select2("destroy");
+                    var options ='<option>';
+                    $.each($.parseJSON(data.customers), function(key,value){
+                        options+='<option value="'+value.id+'">'+value.name+'';
+                    });
+                    $('select[name="customer"]').children().remove();
+                    $('select[name="customer"]').html(options);
+                    $('select[name="customer"]').select2({
+                                                        theme: 'bootstrap4',
+                                                        placeholder: "",
+                                                        searchInputPlaceholder: ''
+                                                    });
+
+                    $('#addCustomerModel').modal('toggle');
+                }else{
+                    $(".print-error-msg-customer").find("ul").html('');
+                    $(".print-error-msg-customer").css('display','block');
+                    $.each( data.error, function( key, value ) {
+                        $(".print-error-msg-customer").find("ul").append('<li>'+value+'');
+                    });
+                }     
+            }
+        });
+        return false;
+    }
+</script>
+        <script>
+    function sendRequest(card_id, search){
+      $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type:'POST',
+                url:'https://operations.tuvatsa.com/scancard/print_certificate',
+                data:{card_id: card_id, search:search},
+                beforeSend:function(){
+                  $('.loading').css('display', 'block');
+                },
+                success:function(data){
+                  $('.loading').css('display', 'none');
+                  if(data)
+                  {
+                    $('.defect_report_container').append('<div class="inner_container">');
+                    $('.defect_report_container .inner_container').append(data['content']);
+                    $('.defect_report_container').css('display', 'block');
+                  }else{
+                    $('.defect_report_container').append('<div class="font-weight-bold inner_container text-center text-danger">Card not found');
+                  }
+                }
+            });
+    }
+
+        $( document ).ready(function() {
+      sendRequest('4377', '0');
+    });
+        
+  </script>
+
+</body>
+
+</html>
