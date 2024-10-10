@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Interface</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .search-box {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .search-box input[type="text"] {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-box input[type="button"] {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .results {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .results th, .results td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Interface</h1>
+    <div class="search-box">
+        <input type="text" id="searchId" placeholder="Enter ID number">
+        <input type="button" value="Search" onclick="searchData()">
+    </div>
+    <table class="results" id="resultTable">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column 6</th>
+                <th>Column 7</th>
+                <th>Column 8</th>
+                <th>Column 9</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+    <script>
+        function searchData() {
+            var searchId = document.getElementById("searchId").value;
+
+            // Replace with your actual database connection code
+            // This example uses a placeholder function
+            fetchResults(searchId);
+        }
+
+        function fetchResults(searchId) {
+            // Replace with your database interaction logic
+            // This example uses a placeholder function to simulate data retrieval
+            var mockData = {
+                "Column 1": "Data 1",
+                "Column 2": "Data 2",
+                "Column 3": "Data 3",
+                "Column 4": "Data 4",
+                "Column 5": "Data 5",
+                "Column 6": "Data 6",
+                "Column 7": "Data 7",
+                "Column 8": "Data 8",
+                "Column 9": "Data 9"
+            };
+
+            populateResults(mockData);
+        }
+
+        function populateResults(data) {
+            var tableBody = document.getElementById("resultTable").getElementsByTagName("tbody")[0];
+            tableBody.innerHTML = ""; // Clear existing results
+
+            // Create a table row for the retrieved data
+            var tableRow = document.createElement("tr");
+            for (var key in data) {
+                var tableCell = document.createElement("td");
+                tableCell.textContent = data[key];
+                tableRow.appendChild(tableCell);
+            }
+            tableBody.appendChild(tableRow);
+        }
+    </script>
+</body>
+</html>
